@@ -20,6 +20,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -33,7 +34,7 @@ public class ConnectTest {
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options); 
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
